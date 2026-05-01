@@ -1,0 +1,75 @@
+{
+  "@context": {
+    "@vocab": "https://raw.githubusercontent.com/api-evangelist/dependency-injection/main/vocabulary/dependency-injection-vocabulary.json#",
+    "schema": "https://schema.org/"
+  },
+  "name": "Dependency Injection Vocabulary",
+  "description": "Controlled vocabulary for the Dependency Injection design pattern.",
+  "version": "1.0.0",
+  "terms": [
+    {
+      "term": "DependencyInjection",
+      "definition": "A pattern where an external assembler supplies a component's collaborators rather than the component creating them itself."
+    },
+    {
+      "term": "InversionOfControl",
+      "definition": "The principle that a framework controls program flow and component wiring, of which DI is one expression."
+    },
+    {
+      "term": "Dependency",
+      "definition": "An object, service, or value that a component requires in order to do its work."
+    },
+    {
+      "term": "Collaborator",
+      "definition": "A dependency invoked by a component to fulfill part of its responsibility."
+    },
+    {
+      "term": "ConstructorInjection",
+      "definition": "Injection style that supplies dependencies through the constructor."
+    },
+    {
+      "term": "SetterInjection",
+      "definition": "Injection style that supplies dependencies through setter methods after construction."
+    },
+    {
+      "term": "InterfaceInjection",
+      "definition": "Injection style in which the dependent implements an interface that the container calls to provide the dependency."
+    },
+    {
+      "term": "MethodInjection",
+      "definition": "Injection style that passes dependencies as parameters to specific methods."
+    },
+    {
+      "term": "CompositionRoot",
+      "definition": "The single location, near program entry, where the object graph is assembled."
+    },
+    {
+      "term": "DIContainer",
+      "definition": "Framework component that resolves and wires dependencies based on registrations."
+    },
+    {
+      "term": "ServiceLocator",
+      "definition": "Alternative pattern in which components actively request dependencies from a registry."
+    },
+    {
+      "term": "Lifetime",
+      "definition": "Policy describing how long a resolved instance lives (singleton, scoped, transient)."
+    },
+    {
+      "term": "Registration",
+      "definition": "Mapping from a service abstraction to its implementation and lifetime within a container."
+    },
+    {
+      "term": "Resolution",
+      "definition": "Process of obtaining an instance of a registered service, recursively resolving its own dependencies."
+    },
+    {
+      "term": "Decorator",
+      "definition": "Wrapping component registered with the container to add behavior around an existing service."
+    },
+    {
+      "term": "Interceptor",
+      "definition": "Component that participates in the resolution pipeline to apply cross-cutting concerns."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "di": "https://raw.githubusercontent.com/api-evangelist/dependency-injection/main/vocabulary/dependency-injection-vocabulary.json#"
+  },
+  "@type": "schema:TechArticle",
+  "@id": "https://github.com/api-evangelist/dependency-injection",
+  "schema:name": "Dependency Injection",
+  "schema:description": "A design pattern in which objects receive their dependencies from external sources rather than creating them internally, promoting loose coupling and easier testing.",
+  "schema:about": [
+    { "@id": "di:DependencyInjection" },
+    { "@id": "di:InversionOfControl" },
+    { "@id": "di:ConstructorInjection" },
+    { "@id": "di:SetterInjection" },
+    { "@id": "di:CompositionRoot" },
+    { "@id": "di:DIContainer" },
+    { "@id": "di:ServiceLocator" }
+  ],
+  "schema:keywords": [
+    "Design Patterns",
+    "Software Architecture",
+    "Testing",
+    "Inversion of Control"
+  ],
+  "schema:sameAs": "https://en.wikipedia.org/wiki/Dependency_injection",
+  "schema:dateCreated": "2025-01-01",
+  "schema:dateModified": "2026-04-28"
+}

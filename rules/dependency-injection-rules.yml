@@ -1,0 +1,77 @@
+name: Dependency Injection Rules
+description: Rules and guidance for applying the Dependency Injection design pattern.
+version: 1.0.0
+created: 2026-04-28
+modified: 2026-04-28
+rules:
+  - id: DI-001
+    name: Prefer Constructor Injection
+    severity: warning
+    description: Inject required collaborators through the constructor by default.
+    rationale: Required dependencies become explicit and the resulting object is always in a valid state.
+
+  - id: DI-002
+    name: Use Setter Injection for Optional Dependencies
+    severity: info
+    description: Reserve setter injection for genuinely optional collaborators or post-construction reconfiguration.
+    rationale: Optional setters keep the constructor focused while signaling that the dependency may be absent.
+
+  - id: DI-003
+    name: Depend on Abstractions
+    severity: error
+    description: Type constructor parameters and fields against interfaces, not concrete classes.
+    rationale: Programming to interfaces preserves substitutability and unlocks test doubles.
+
+  - id: DI-004
+    name: No new Inside Business Logic
+    severity: warning
+    description: Avoid instantiating collaborators with new inside methods that hold business logic.
+    rationale: Hidden construction couples logic to specific implementations and frustrates testing.
+
+  - id: DI-005
+    name: Avoid Service Locator in Domain Code
+    severity: warning
+    description: Domain and application services should not call a service locator to fetch collaborators.
+    rationale: Locators hide dependencies and reintroduce the coupling DI removes.
+
+  - id: DI-006
+    name: Composition Root at the Edge
+    severity: error
+    description: Wire the object graph in a single composition root at application startup.
+    rationale: Centralizing wiring keeps the rest of the codebase free of container concerns.
+
+  - id: DI-007
+    name: Limit Constructor Parameter Count
+    severity: warning
+    description: A constructor that requires more than five collaborators signals a violation of the single responsibility principle.
+    rationale: A bloated constructor reveals an over-scoped class that should be decomposed.
+
+  - id: DI-008
+    name: Forbid Field Injection in Production Code
+    severity: warning
+    description: Avoid annotation-driven field injection on private fields outside frameworks that require it.
+    rationale: Field injection hides dependencies, prevents immutability, and breaks plain-object construction in tests.
+
+  - id: DI-009
+    name: Scope Lifetimes Explicitly
+    severity: info
+    description: Declare singleton, scoped, and transient lifetimes intentionally; do not rely on container defaults.
+    rationale: Implicit lifetimes produce subtle threading and state-sharing bugs.
+
+  - id: DI-010
+    name: Avoid Circular Dependencies
+    severity: error
+    description: Detect and break circular dependencies between injected components.
+    rationale: Cycles indicate a layering mistake and often manifest as initialization order bugs.
+
+  - id: DI-011
+    name: Configuration Separate from Usage
+    severity: warning
+    description: Externalize wiring configuration from the classes that consume the dependencies.
+    rationale: Decoupling configuration from logic is the foundational principle that DI exists to express.
+
+  - id: DI-012
+    name: Test Without the Container
+    severity: info
+    description: Unit tests should construct objects directly with test doubles rather than booting the DI container.
+    rationale: Container-free tests run faster and prove that injected classes can be instantiated explicitly.
