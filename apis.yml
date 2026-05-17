@@ -37,7 +37,7 @@ apis:
       - type: Vocabulary
         url: >-
           https://raw.githubusercontent.com/api-evangelist/dependency-injection/main/vocabulary/dependency-injection-vocabulary.json
-      - type: JSON-LD
+      - type: JSONLD
         url: >-
           https://raw.githubusercontent.com/api-evangelist/dependency-injection/main/json-ld/dependency-injection.jsonld
 common:
@@ -45,7 +45,7 @@ common:
     url: https://en.wikipedia.org/wiki/Dependency_injection
   - type: Reference
     url: https://martinfowler.com/articles/injection.html
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/api-evangelist
 maintainers:
   - FN: Kin Lane
