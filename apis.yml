@@ -6,7 +6,7 @@ description: >-
   testing, and clear composition roots. Effective use of this practice reduces
   bugs in production and supports a culture of quality-driven development.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Design Patterns
   - Inversion of Control
