@@ -1,8 +1,8 @@
-name: Dependency Injection Rules
+x-name: Dependency Injection Rules
 description: Rules and guidance for applying the Dependency Injection design pattern.
-version: 1.0.0
-created: 2026-04-28
-modified: 2026-04-28
+x-version: 1.0.0
+x-created: 2026-04-28
+x-modified: 2026-04-28
 rules:
   - id: DI-001
     name: Prefer Constructor Injection
